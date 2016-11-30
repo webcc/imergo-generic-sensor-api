@@ -7,7 +7,7 @@
         "email": "webcc@fit.fraunhofer.de"
     },
     "dependencies": {
-        "imergo-om-base": "4.1.0"
+        "imergo-om-base": "webcc/imergo-om-base#dev"
     },
     "devDependencies": {
         "mocha": "*"
