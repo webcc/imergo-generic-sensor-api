@@ -1,6 +1,7 @@
 "use strict";
 const assert = require("assert");
 const Event = require("imergo-om-base").Event;
+const InvalidStateError = require("imergo-om-base").InvalidStateError;
 const model = require("..");
 describe("imergo-generic-sensor-api::Sensor", () =>
 {
@@ -118,5 +119,15 @@ describe("imergo-generic-sensor-api::Sensor", () =>
                 done();
             });
         });
+    });
+
+    it("should throw an error if the sensor is started when neither in 'idle' or 'errored' state", done =>
+    {
+        let sensor = new model.Sensor();
+        sensor.start().then(() => {
+            sensor.start()
+                .then(() => {})
+                .catch(error => done())
+        })
     });
 });
