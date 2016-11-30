@@ -120,14 +120,20 @@ describe("imergo-generic-sensor-api::Sensor", () =>
             });
         });
     });
-
     it("should throw an error if the sensor is started when neither in 'idle' or 'errored' state", done =>
     {
         let sensor = new model.Sensor();
         sensor.start().then(() => {
             sensor.start()
                 .then(() => {})
-                .catch(error => done())
+                .catch(error => done());
         })
+    });
+    it("should throw an error if the sensor is stopped when either in 'idle' or 'errored' state", done =>
+    {
+        let sensor = new model.Sensor();
+        sensor.stop()
+            .then(() => {})
+            .catch(error => done());
     });
 });
