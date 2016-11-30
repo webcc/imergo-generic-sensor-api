@@ -1,13 +1,13 @@
 {
     "name": "imergo-generic-sensor-api",
     "description": "Node module with a reference implementation of the Generic Sensor API from W3C.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "Web Compliance Center",
         "email": "webcc@fit.fraunhofer.de"
     },
     "dependencies": {
-        "imergo-om-base": "4.0.1"
+        "imergo-om-base": "4.1.0"
     },
     "devDependencies": {
         "mocha": "*"
