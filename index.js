@@ -1,9 +1,9 @@
 "use strict";
 
 module.exports = {
-    "SensorState": require("./lib/SensorState"),
+    "Sensor": require("./lib/Sensor"),
     "SensorErrorEvent": require("./lib/SensorErrorEvent"),
     "SensorReadingEvent": require("./lib/SensorReadingEvent"),
-    "SensorReading": require("./lib/SensorReading"),
-    "Sensor": require("./lib/Sensor")
+    "SensorState": require("./lib/SensorState"),
+    "SensorReading": require("./lib/SensorReading")
 };
